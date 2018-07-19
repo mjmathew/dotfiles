@@ -1,0 +1,33 @@
+[user]
+  name = <insert name>
+  email = <insert email> 
+[core]
+  editor = vim
+[push]
+  default = simple
+[color]
+  ui = auto
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+
+[alias]
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  pr = pull --rebase
+  ls = log --oneline --graph --pretty=format:'%C(yellow)%h%Creset %C(white)%ad%Creset %Cred%an%Creset %s' --date=relative
+  missing=!git ls --no-merges @{0} ^$1
+
